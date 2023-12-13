@@ -1,0 +1,4 @@
+Firstly I created a docker file with all the required dependencies(libraries) installed.
+I built an image of that file and then created it's container.
+Next I created a new Notebook on Jupyter Notebook named "my_notebook.ipynb".
+I gave the file an unformatted markdown instruction. Then using the terminal window I formatted the file using nbqa library to get a correctly formated my_notebook.ipynb file. 

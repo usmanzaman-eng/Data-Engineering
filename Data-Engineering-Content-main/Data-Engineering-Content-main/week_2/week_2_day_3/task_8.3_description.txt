@@ -1,0 +1,10 @@
+Completed task suing docker concepts so that they remanin persistent with memory.
+Built an image of the dockerfile and created a container as well as downloaded the csv file that was to be used in the same directory.
+Read the dataset and obtained perticular rows by using their "Species" column as their keys(total 3 keys exist in this case ) by using query() function.
+Applied mean() function on column "SepalLengthCm" for the results, to each of the three different species.
+
+Group Members:
+	Usman Zaman 2211-032-KHI-DEG
+	Rumaisa Shahab 2211-024-KHI-DEG
+
+

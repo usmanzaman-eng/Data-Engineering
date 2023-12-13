@@ -1,0 +1,13 @@
+What is Docker?
+It uses OS-level virtualization to deliver software in packages(containers).The logo for docker also represents that multiple containers being carried by a whale(like a ship does).Docker file sis basically a file that is describing how to build an image.
+Daemon is a type of program that runs independently.A daemon is a service process that runs in the background and supervises the system or provides functionality to other processes. 
+CONTAINER:A container is a way we package our application so that it regarless of differences among different systems and enviroment in system features can be executed smoothly.It is basically virtualizing the OS or imitating the host OS.It gives security as nothing breaches in or out of the container.Moreover are lighweight in comparision to a virtual machine.However,graphical applications are unable to make use of these for the best.Container can interact with each other by sharing data to and from other containers.Containers are encapsulated in such a manner that they are not allowed to know about the host data.
+ADDITIONAL COMMAND AFTER RUNNING AN IMAGE:
+docker run - p 8888:8888\
+           -v $PWD:/home/usmanzaman\
+           -e NOTEBOOK_ARGS=-log-level='DEBUG' \
+           jupyter/minimal-notebook
+Volumes in Docker:
+BINDMOUNT:file or directory is mounted from host site to a container.Any modification in the container results in changes in the host directory as well.It is prone to vulnerability of security as host data might be compromised.#Adviced not to use it due to security issues.
+NETWORKS:for creating a network among different containers.It can be viewed as grouping perticular containers together.
+

@@ -1,0 +1,6 @@
+Created a directory to create my docker file.
+Created a file named "Dockerfile" using touch command and editted it by entering commands inside of it.
+Next built an image of the file.
+From that image created a container 
+Next checked by using a function of the Pandas Library
+

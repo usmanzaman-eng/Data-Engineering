@@ -1,0 +1,15 @@
+                     TOPIC: GOOD SOFTWARE ENGINEERING PRACTICES
+CODE should be clean that means it could be easily interpreted by others.
+Simplicity must be there in the code as that is most effective while testing and interpretation of the code by others.
+Code should be reusable and not abundant in your program.Key is to avoid repetition. to reduce chances of bugs as well as saves time and would be easy to manage.
+In case of a bug don't go for quick fixes always try to identify the root cause and then remove it.
+configurable data to be kept at highest level so that they can be easily modified.
+Give flexibility to the user but also reduce the number of decisions that the user can make.Simultaneously you have to maintain these two points.
+Consistency in coding refers to use same coding practices as other team members or that are already used in the initial part of the code.
+Dependencies in the code must be flexible.
+NAMING CONVENTIONS:1).Names should be meaningful and easily understandable. 2).Go for searchable names 3). Replace magic numbers by constants 4).Avoid side effects like modifying something which was not supposed to be updated.
+******class names are always started by a Capital letter*******
+SNAKE_CASE = current_date and CAMEL_CASE = currentDate***Snake case is a better practice for method and Pascal Case for classes e.g. CurrentDate***
+Modularize your code well for better optimization and efficiency.
+pure function*****
+

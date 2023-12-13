@@ -1,0 +1,10 @@
+name: basic_mlflow
+
+entry_points:
+  main:
+    # parameters is a key-value collection.
+    parameters:
+      max_k:
+        type: int
+        default: 10
+    command: "python train_usman.py {max_k}"

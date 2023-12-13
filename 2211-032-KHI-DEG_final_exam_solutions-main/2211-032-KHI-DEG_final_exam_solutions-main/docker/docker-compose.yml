@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  fast_api:
+    build: ./fast_api
+    container_name: fast_api
+    ports:
+      - 8000:3000
+    depends_on:
+      - redis
+  redis:
+    image: redis:alpine
+    container_name: redis
+    restart: always
+    ports:
+      - 6379:6379
+    volumes: 
+      - .:/data

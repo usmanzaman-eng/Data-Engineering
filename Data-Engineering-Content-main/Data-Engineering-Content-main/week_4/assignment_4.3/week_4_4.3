@@ -1,0 +1,28 @@
+*************Usman Zaman 2211-032-KHI-DEG AND Rumaisa Shahab 2211-024-KHI-DEG****************
+
+*****creating a minikube cluster******
+sudo usermod -aG docker $USER && newgrp docker
+minikube start
+
+*********to see existing pods*********
+kubeclt get pod -A
+
+*******deploying deployment,service,secret and config by applying the .yaml files provided**********
+kubectl apply -f .
+
+*********to view all running containers **********
+kubeclt get all
+
+
+**********viewing logs of a particular pod************
+kubectl logs pod/mongo-deployment-5fb8d98f85-lnlgh
+
+**********for viewing description of a particular pod************
+kubectl describe pod/mongo-deployment-5fb8d98f85-lnlgh
+
+**********for creating a document via Mong Express*********
+kubectl exec -it mongo-deployment-5fb8d98f85-lnlgh -- bash
+$MONGO_INITDB_ROOT_USERNAME -p $MONGO_INITDB_ROOT_PASSWORD
+use MongoDB
+show collections
+db.rumaisa.find()

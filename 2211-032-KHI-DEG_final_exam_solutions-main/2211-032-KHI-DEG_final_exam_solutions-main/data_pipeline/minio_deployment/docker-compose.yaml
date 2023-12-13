@@ -1,0 +1,47 @@
+version: "3.9"
+services:
+  minio-server:
+    image: minio/minio:latest
+    hostname: minio-server
+    container_name: minio-server
+    networks:
+      default:
+    volumes:
+      - ./s3_data:/data
+    ports:
+      - "9000:9000"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+    command: server /data
+
+  minio-client:
+    image: minio/mc
+    hostname: minio-client
+    container_name: minio-client
+    networks:
+      default:
+    depends_on:
+      - minio-server
+    entrypoint: >
+      /bin/sh -c "
+      /usr/bin/mc config;
+      /usr/bin/mc config host add myminio http://minio-server:9000 ${MINIO_ROOT_USER} ${MINIO_ROOT_PASSWORD};
+      /usr/bin/mc mb --ignore-existing myminio/test-bucket;
+      exit 0;
+      "
+  mongodb:
+    image : mongo
+    container_name: mongodb
+    volumes:
+    - .:/data/db
+    ports:
+    - 27017:27017
+  data_collector:
+    build: ./data_collector
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+      S3_ENDPOINT_URL: $(S3_ENDPOINT_URL)
+    ports:
+    - 8888:8888

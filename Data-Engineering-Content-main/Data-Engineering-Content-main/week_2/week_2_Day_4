@@ -1,0 +1,9 @@
+Raw data is visually(graphically) represented so that it would be understood easily.
+Numerical Data( represented by numeric values):Continuous data can have data from a infinite(to some extent) set of values opposite for Discrete data.
+Categorical Data (Represented by strings used to define different categories):Ordinal when we can give categories an order like short,tall etc.Nominal are ones where they cant be ordered like Name or hair color etc.
+BAR GRAPHS ARE USED TO COMPARE DIFFERENCES BETWEEN DISCRETE CATEGORIES
+PIE CHARTS ARE USEFUL FOR COMPARING DATA AS A PART OF THE WHOLE
+SCATTER PLOT CAN BE USED TO VISUALIZE A RELATIONSHIP BETWEEN TWO VARIABLES
+LINE GRAPH IS OFTEN USED TO DESCRIBE TIME SERIES AND PROGRESS IN DATA
+HISTOGRAMS ARE USED TO REPRESENT THE DISTRIBUTION OF A NUMERICAL VARIABLE
+HEATMAPS USE COLOR TO REPRESENT VARIABLES INTENSITY
